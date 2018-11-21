@@ -16,8 +16,9 @@
             <p>HEART DISEASE PREDICTOR</p>
         </div>
         <div class="refresh">
-            <img src="assets/refresh.png">
-            </img>
+            <a href="main.php">
+                <img src="assets/refresh.png">
+            </a>
         </div>    
     </div>
     <div class = "body">
@@ -104,7 +105,14 @@
                 </div>
                 <div class="input-container">
                     <div class="label"><label for="major-vessels">Number of Major Vessels (0-3) Colored by Flourosopy</label></div>
-                    <div class="input"><input type="text" name="major-vessels"></div>
+                    <div class = "dropdown">
+                        <select name ="major-vessels">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="input-container">
                     <div class="label"><label for="thal">Thal</label></div>
@@ -116,16 +124,18 @@
                         </select>
                     </div>
                 </div>
-                <input type="submit" value="SEE MY DIAGNOSIS">
+                <div class="submit">
+                    <input type="submit" value="SEE MY DIAGNOSIS">
+                </div>
             </form>
         </div>
         <div class="authors">
-            <p> Author : 
-            Sekar - 13516044 |
-            Hani - 13516053 |
-            Yora - 13516067 |
-            Alif - 13516078 |
-            Deborah - 13516152
+            <p> AUTHOR : 
+            SEKAR - 13516044 |
+            HANI - 13516053 |
+            YORA - 13516067 |
+            ALIF - 13516078 |
+            DEBORAH - 13516152
             </p>
         </div>
     </div>
