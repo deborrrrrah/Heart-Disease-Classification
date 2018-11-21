@@ -24,7 +24,7 @@
     <div class = "body">
         <div class = "forms">
             <p>To know your heart disease diagnose, please fill the informations below.</p>
-            <form class="form-container" action="" method="post">
+            <form class="form-container" action="result.php" method="post">
                 <div class="input-container">
                     <div class="label"><label for="age">Age</label></div>
                     <div class="input"><input type="text" name="age" id="age" placeholder="21"><span class="unit">years</span></div>
@@ -57,7 +57,7 @@
                 <div class="input-container">
                     <div class="label"><label for="serum-cholestrol">Serum Cholestrol</label></div>
                     <div class="input">
-                        <input type="text" name="serum-cholestrol"> 
+                        <input type="text" name="serum-cholestrol" placeholder="200"> 
                         <span class="unit">mg/dl</span>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                 </div>
                 <div class="input-container">
                     <div class="label"><label for="max-heart-rate">Max Heart Rate Achieved</label></div>
-                    <div class="input"><input type="text" name="max-heart-rate"></div>
+                    <div class="input"><input type="text" name="max-heart-rate" placeholder="200"></div>
                 </div>
                 <div class="input-container">
                     <div class="label"><label for="exercise-induced">Exercise Induced Angina</label></div>
@@ -91,7 +91,7 @@
                 </div>
                 <div class="input-container">
                     <div class="label"><label for="st-depression">ST Depression Induced by Exercise Relative to Rest</label></div>
-                    <div class="input"><input type="text" name="st-depression"></div>
+                    <div class="input"><input type="text" name="st-depression" placeholder="200"></div>
                 </div>
                 <div class="input-container">
                     <div class="label"><label for="peak-exercise">Peak Exercise ST Segment</label></div>     

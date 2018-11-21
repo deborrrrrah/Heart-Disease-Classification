@@ -54,26 +54,17 @@ img {
     font-size: 120%;
 }
 
-.forms{
+.results{
     margin: 0;
-    background-color: #FF6B46 ;
     padding: 15px;
-    height:auto;
+    background-color: #FF6B46;
+    height: 624px; 
 }
 
-.forms p{
+.results p{
     text-align: center;
     margin:0;
     word-wrap: normal;
-}
-
-.form-container{
-    margin-left: 25%;
-    margin-right: 25%;
-}
-
-.input-container{
-    margin : 15px;
 }
 
 .authors{
@@ -88,63 +79,4 @@ img {
     font-family: Playfair Display;
     color: #3A4042;
     font-weight: bold;
-}
-
-.label{
-    float: left; 
-    margin-right: 10%;   
-    word-wrap: normal;
-}
-
-span.unit{
-    float: right;
-    margin: 5px;
-}
-
-.submit{
-    text-align: center;
-}
-
-.radio{
-    text-align: right;
-    margin: 5px;
-}
-
-.dropdown{
-    text-align: right;
-    margin :5px;    
-}
-
-.dropdown select{
-    border-radius: 4px;
-    font-family: Playfair Display;
-    font-size: 80%;
-    width:22%;
-    height: 25px;
-}
-
-.input{
-    margin : 5px;
-    text-align: right;
-}
-
-input[type=text]{
-    border-radius: 4px;
-    width: 12%;
-    height: auto;
-    font-size: 80%;
-    font-family: Playfair Display;
-    text-align: center;
-}
-
-input[type=submit]{
-    border-radius: 4px;
-    border : 3px #3A4042;
-    background-color: #F9E89B;
-    font-family: Lato;
-    font-size: 100%;
-    font-weight: bold;
-    color: #EA3C33;
-    padding: 5px;
-    margin-bottom: 7px;
 }
