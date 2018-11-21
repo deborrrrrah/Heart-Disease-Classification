@@ -1,0 +1,75 @@
+/* FONT FAMILY */
+@import url(//fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext);
+@import url(//fonts.googleapis.com/css?family=Playfair+Display&subset=latin,latin-ext);
+
+/* GENERAL-HEADER */
+body {
+    margin:0;
+}
+
+div.header {
+    background-color: #F9E89B;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+div.blank{
+    width: 30%;
+}
+
+div.title{
+    width: auto;
+}
+
+div.title p{
+    font-family: Playfair Display;
+    font-size: 300%;
+    width: auto;
+    color: #EA3C33;
+    font-weight: bold;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    position: relative;
+}
+
+img {
+    height : 55px;
+    fill : #260520;
+    float: right;
+    margin-top:5px;   
+}
+
+div.refresh{
+    align-content: center;
+    width: 27%;
+}
+
+div.body{
+    background-color: #FF6B46 ;
+}
+
+div.forms{
+    padding-top:2%;
+    font-family: Lato; 
+    margin-left: 30%;
+    margin-right: 30%;
+    font-size: 150%;
+    color: 3F5866;
+}
+
+div.forms p{
+    font-size: 82%;
+}
+
+div.authors{
+    font-family: Playfair Display;
+    font-size: 19px;
+    text-align: center;
+}
+
+div.authors p{
+    color: #260520;
+    margin: 0;
+}
