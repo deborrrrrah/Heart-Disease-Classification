@@ -25,10 +25,10 @@
             <p>To know your heart disease diagnose, please fill the informations below.</p>
             <form id = "patient-form">
                 <label>Age</label>
-                <input type="text" name="age"> years
+                <input type="text" name="age"> years <br>
                 <br>
-                <label>Sex</label> <br>
-                <input type="radio" name="sex" value="1" checked>Male<br>
+                <label>Sex</label>
+                <input type="radio" name="sex" value="1" checked>Male
                 <input type="radio" name="sex" value="0">Female<br>
                 <br>
                 <label>Chest-pain Type</label>
@@ -41,14 +41,17 @@
                     </select>
                 </span>
                 <br>
+                <br>
                 <label>Resting Blood Pressure</label>
                     <input type="text" name="rest-blood-pressure"> mmHg
+                <br>
                 <br>
                 <label>Serum Cholestrol</label>
                     <input type="text" name="serum-cholestrol"> mg/dl
                 <br>
-                <label>Fasting, Blood Sugar > 120 mg/dl?</label><br>
-                    <input type="radio" name="fasting" value="1" checked>True<br>
+                <br>
+                <label>Fasting, Blood Sugar > 120 mg/dl?</label>
+                    <input type="radio" name="fasting" value="1" checked>True
                     <input type="radio" name="fasting" value="0">False<br>
                 <br>
                 <label>Resting ECG</label>
@@ -60,15 +63,18 @@
                     </select>
                 </span>
                 <br>
+                <br>
                 <label>Max Heart Rate Achieved</label>
                     <input type="text" name="max-heart-rate">
                 <br>
-                <label>Exercise Induced Angina</label><br>
-                    <input type="radio" name="exercise-induced" value="1" checked>Yes<br>
+                <br>
+                <label>Exercise Induced Angina</label>
+                    <input type="radio" name="exercise-induced" value="1" checked>Yes
                     <input type="radio" name="exercise-induced" value="0">No<br>
                 <br>
                 <label>ST Depression Induced by Exercise Relative to Rest</label>
                     <input type="text" name="st-depression">
+                <br>
                 <br>
                 <label>Peak Exercise ST Segment</label>
                 <span class = "dropdown">
@@ -79,8 +85,10 @@
                     </select>
                 </span>
                 <br>
+                <br>
                 <label>Number of Major Vessels (0-3) Colored by Flourosopy</label>
                     <input type="text" name="major-vessels">
+                    <br>
                     <br>
                 <label>Thal</label>
                 <span class = "dropdown">
