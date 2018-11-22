@@ -25,7 +25,7 @@
     <div class = "body">
         <div class = "forms">
             <p>To know your heart disease diagnose, please fill the informations below.</p>
-            <form class="form-container" method="get">
+            <form class="form-container" method="get" autocomplete="off">
                 <div class="input-container">
                     <div class="label"><label for="age">Age</label></div>
                     <div class="input"><input type="text" name="age" id="age" placeholder="21"><span class="unit">years</span></div>
@@ -126,7 +126,7 @@
                     </div>
                 </div>
                 <div class="submit">
-                    <input type="submit" id="submit" value="SEE MY DIAGNOSIS">
+                    <button onclick="return validateForm()" type="submit" name="submit" id="submit">SEE MY DIAGNOSIS</button>
                 </div>
             </form>
         </div>
