@@ -158,6 +158,12 @@ button {
     margin-bottom: 7px;
 }
 
+button:hover {
+    background-color: #3A4042;
+    color: #F9E89B;
+    border : 5px;
+}
+
 .results{
     background-color: #FF6B46;
     text-align: center;
@@ -172,4 +178,9 @@ button {
 .results h1{
     margin: 0;
     height: auto;
+}
+
+.check_img {
+    height: 23px;
+    margin-left: 2px;
 }

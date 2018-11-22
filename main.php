@@ -28,6 +28,7 @@
             <form class="form-container" method="get" autocomplete="off">
                 <div class="input-container">
                     <div class="label"><label for="age">Age</label></div>
+                    <img class="check_img" src="exclamation.jpg" id="check1" style="display: none">
                     <div class="input"><input type="text" name="age" id="age" placeholder="21"><span class="unit">years</span></div>
                 </div>
                 <div class="input-container">
@@ -50,15 +51,17 @@
                 </div>
                 <div class="input-container">
                     <div class="label"><label for="resting-blood-pressure">Resting Blood Pressure</label></div>
+                    <img class="check_img" src="exclamation.jpg" id="check2" style="display: none">
                     <div class="input">
-                        <input type="text" name="rest-blood-pressure" placeholder="210">
+                        <input type="text" name="rest-blood-pressure" id="rest-blood-pressure" placeholder="210">
                         <span class="unit">mmHg</span>
                     </div>
                 </div>
                 <div class="input-container">
                     <div class="label"><label for="serum-cholestrol">Serum Cholestrol</label></div>
+                    <img class="check_img" src="exclamation.jpg" id="check3" style="display: none">
                     <div class="input">
-                        <input type="text" name="serum-cholestrol" placeholder="200"> 
+                        <input type="text" name="serum-cholestrol" id="serum-cholestrol" placeholder="200"> 
                         <span class="unit">mg/dl</span>
                     </div>
                 </div>
@@ -81,7 +84,8 @@
                 </div>
                 <div class="input-container">
                     <div class="label"><label for="max-heart-rate">Max Heart Rate Achieved</label></div>
-                    <div class="input"><input type="text" name="max-heart-rate" placeholder="200"></div>
+                    <img class="check_img" src="exclamation.jpg" id="check4" style="display: none">
+                    <div class="input"><input type="text" name="max-heart-rate" id="max-heart-rate" placeholder="200"></div>
                 </div>
                 <div class="input-container">
                     <div class="label"><label for="exercise-induced">Exercise Induced Angina</label></div>
@@ -92,7 +96,8 @@
                 </div>
                 <div class="input-container">
                     <div class="label"><label for="st-depression">ST Depression Induced by Exercise Relative to Rest</label></div>
-                    <div class="input"><input type="text" name="st-depression" placeholder="200"></div>
+                    <img class="check_img" src="exclamation.jpg" id="check5" style="display: none">
+                    <div class="input"><input type="text" name="st-depression" id="st-depression" placeholder="200"></div>
                 </div>
                 <div class="input-container">
                     <div class="label"><label for="peak-exercise">Peak Exercise ST Segment</label></div>     
