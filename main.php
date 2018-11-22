@@ -1,3 +1,11 @@
+<?php
+    if(isset($_GET['submit'])) {
+        $file = ("main.json");
+        $json_string = json_encode($_GET, JSON_PRETTY_PRINT);
+        file_put_contents($file,$json_string);
+       
+    }
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,7 +33,7 @@
     <div class = "body">
         <div class = "forms">
             <p>To know your heart disease diagnose, please fill the informations below.</p>
-            <form class="form-container" method="get" autocomplete="off">
+            <form class="form-container" method="get" autocomplete="off" id="form">
                 <div class="input-container">
                     <div class="label"><label for="age">Age</label></div>
                     <img class="check_img" src="exclamation.jpg" id="check1" style="display: none">
