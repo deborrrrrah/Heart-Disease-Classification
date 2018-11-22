@@ -8,6 +8,9 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
 </head>
+<?php
+    $output = 5;
+?>
 <body>
     <div class = "header">
         <div class="blank">
@@ -16,15 +19,13 @@
             <p>HEART DISEASE PREDICTOR</p>
         </div>
         <div class="refresh">
-            <a href="main.php">
-                <img src="assets/refresh.png">
-            </a>
+            <img src="assets/refresh.png" id="refresh">
         </div>    
     </div>
     <div class = "body">
         <div class = "forms">
             <p>To know your heart disease diagnose, please fill the informations below.</p>
-            <form class="form-container" action="result.php" method="post">
+            <form class="form-container" method="get">
                 <div class="input-container">
                     <div class="label"><label for="age">Age</label></div>
                     <div class="input"><input type="text" name="age" id="age" placeholder="21"><span class="unit">years</span></div>
@@ -125,10 +126,16 @@
                     </div>
                 </div>
                 <div class="submit">
-                    <input type="submit" value="SEE MY DIAGNOSIS">
+                    <input type="submit" id="submit" value="SEE MY DIAGNOSIS">
                 </div>
             </form>
         </div>
+        <div class="results">
+            <p>You are diagnose to be</p>
+            <h1><?php echo $output; ?></h1>
+        </div>
+    </div>
+    <div class="footer">
         <div class="authors">
             <p> AUTHOR : 
             SEKAR - 13516044 |

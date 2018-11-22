@@ -73,21 +73,25 @@ img {
 }
 
 .input-container{
-    margin : 15px;
+    margin : 10px;
 }
 
-.authors{
+.footer{
     text-align: center;
     background-color: #F9E89B;
-    padding:10px;
+    padding:5px;
 }
 
-.authors p{
+.authors {
     margin:0;
     font-size: 125%;
     font-family: Playfair Display;
     color: #3A4042;
     font-weight: bold;
+}
+
+.authors p{
+    margin :0;
 }
 
 .label{
@@ -103,6 +107,7 @@ span.unit{
 
 .submit{
     text-align: center;
+    padding: 2px;
 }
 
 .radio{
@@ -121,6 +126,8 @@ span.unit{
     font-size: 80%;
     width:22%;
     height: 25px;
+    background-color: #F9E89B;
+    color: #3A4042;
 }
 
 .input{
@@ -135,6 +142,8 @@ input[type=text]{
     font-size: 80%;
     font-family: Playfair Display;
     text-align: center;
+    background-color: #F9E89B;
+    color: #EA3C33;
 }
 
 input[type=submit]{
@@ -145,6 +154,22 @@ input[type=submit]{
     font-size: 100%;
     font-weight: bold;
     color: #EA3C33;
-    padding: 5px;
+    padding: 2px;
     margin-bottom: 7px;
+}
+
+.results{
+    background-color: #FF6B46;
+    text-align: center;
+    height: 80px;
+    padding: 2px;
+}
+
+.results p{
+    margin:0;   
+}
+
+.results h1{
+    margin: 0;
+    height: auto;
 }
