@@ -1,0 +1,16 @@
+{
+    "age": "21",
+    "sex": "1",
+    "chest-pain-type": "1",
+    "rest-blood-pressure": "210",
+    "serum-cholestrol": "200",
+    "fasting": "1",
+    "resting-ecg": "0",
+    "max-heart-rate": "200",
+    "exercise-induced": "1",
+    "st-depression": "200",
+    "peak-exercise": "1",
+    "major-vessels": "0",
+    "thal": "3",
+    "submit": ""
+}
