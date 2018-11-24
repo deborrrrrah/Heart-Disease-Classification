@@ -139,9 +139,9 @@
             if(isset($_GET['submit'])) {
                 $file = ("main.json");
                 $json_string = json_encode($_GET, JSON_PRETTY_PRINT);
-                file_put_contents($file,$json_string);  
+                file_put_contents($file,$json_string); 
+                $output = shell_exec("python main.py"); 
             }
-            //$output = shell_exec("python main.py");
         ?>
         <div class="results">
             <p>You are diagnose to be</p>

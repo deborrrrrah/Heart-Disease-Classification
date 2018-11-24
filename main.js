@@ -9,9 +9,6 @@ function seeResult() {
     xhttp.send();
 }
 
-$('#refresh').click(function() {
-    alert("it is working");
-})
 
 /*function validateForm() {
     filled = true;
