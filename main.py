@@ -1,6 +1,6 @@
 from sklearn.naive_bayes import GaussianNB
+from sklearn.externals import joblib
 import numpy as np
-import joblib
 import json
 
 filename = 'main.json'
@@ -17,5 +17,5 @@ with open(filename) as json_file:
 data =  np.array(data)
 model = joblib.load('Model/gnb_model.sav')
 pred = model.predict(data)
-result = 1#pred[0]
+result = pred[0]
 print (result)
