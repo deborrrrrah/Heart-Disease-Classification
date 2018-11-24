@@ -1,4 +1,3 @@
-from sklearn.naive_bayes import GaussianNB
 from sklearn.externals import joblib
 import numpy as np
 import json
@@ -6,7 +5,6 @@ import json
 filename = 'main.json'
 
 data =[]
-data_test=[]
 
 with open(filename) as json_file:
     x = json.load(json_file)
