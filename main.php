@@ -20,7 +20,7 @@
         </div>
         <div class="refresh">
             <img src="assets/refresh.png" id="refresh">
-        </div>    
+        </div>
     </div>
     <div class = "body">
         <div class = "forms">
@@ -61,7 +61,7 @@
                     <div class="label"><label for="serum-cholestrol">Serum Cholestrol</label></div>
                     <img class="check_img" src="exclamation.jpg" id="check3" style="display: none">
                     <div class="input">
-                        <input type="text" name="serum-cholestrol" id="serum-cholestrol" placeholder="200"> 
+                        <input type="text" name="serum-cholestrol" id="serum-cholestrol" placeholder="200">
                         <span class="unit">mg/dl</span>
                     </div>
                 </div>
@@ -100,7 +100,7 @@
                     <div class="input"><input type="text" name="st-depression" id="st-depression" placeholder="200"></div>
                 </div>
                 <div class="input-container">
-                    <div class="label"><label for="peak-exercise">Peak Exercise ST Segment</label></div>     
+                    <div class="label"><label for="peak-exercise">Peak Exercise ST Segment</label></div>
                     <div class = "dropdown">
                         <select name ="peak-exercise">
                             <option value="1">Upsloping</option>
@@ -139,18 +139,21 @@
             if(isset($_GET['submit'])) {
                 $file = ("main.json");
                 $json_string = json_encode($_GET, JSON_PRETTY_PRINT);
-                file_put_contents($file,$json_string); 
-                $output = shell_exec("python main.py"); 
+                file_put_contents($file,$json_string);
             }
         ?>
         <div class="results">
             <p>You are diagnose to be</p>
-            <h1><?php echo $output; ?></h1>
+            <h1><?php
+                  $command = escapeshellcmd('python main.py');
+                  $output = shell_exec($command);
+                  echo $output;
+            ?></h1>
         </div>
     </div>
     <div class="footer">
         <div class="authors">
-            <p> AUTHOR : 
+            <p> AUTHOR :
             SEKAR - 13516044 |
             HANI - 13516053 |
             YORA - 13516067 |
