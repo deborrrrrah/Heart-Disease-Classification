@@ -19,13 +19,13 @@
             <p>HEART DISEASE PREDICTOR</p>
         </div>
         <div class="refresh">
-            <img src="assets/refresh.png" id="refresh">
+            <button onclick="return clearData()"> <img src="assets/refresh.png" id="refresh"> </button>
         </div>
     </div>
     <div class = "body">
         <div class = "forms">
             <p>To know your heart disease diagnose, please fill the informations below.</p>
-            <form class="form-container" method="get" autocomplete="off" id="form">
+            <form class="form-container" onsubmit="return validateForm()" autocomplete="off" id="form">
                 <div class="input-container">
                     <div class="label"><label for="age">Age</label></div>
                     <img class="check_img" src="exclamation.jpg" id="check1" style="display: none">
@@ -131,7 +131,7 @@
                     </div>
                 </div>
                 <div class="submit">
-                    <button onclick="return validateForm()" type="submit" name="submit" id="submit">SEE MY DIAGNOSIS</button>
+                    <button type="submit" name="submit" id="submit">SEE MY DIAGNOSIS</button>
                 </div>
             </form>
         </div>
@@ -144,11 +144,9 @@
         ?>
         <div class="results">
             <p>You are diagnose to be</p>
-            <h1><?php
-                  $command = escapeshellcmd('python main.py');
-                  $output = shell_exec($command);
-                  echo $output;
-            ?></h1>
+            <h1>
+            <div id="result"> 2 </div>
+            </h1>
         </div>
     </div>
     <div class="footer">

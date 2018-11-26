@@ -1,54 +1,3 @@
-function seeResult() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementsByTagName('result').innerHTML = this.responseText;
-        }
-    };
-    xhttp.open("GET", "ajax_info.txt", true);
-    xhttp.send();
-}
-
-
-/*function validateForm() {
-    filled = true;
-    var x = [];
-    x.push(document.forms["form-container"]["age"].value,
-    document.forms["form-container"]["sex"].value,
-    document.forms["form-container"]["chest-pain-type"].value,
-    document.forms["form-container"]["resting-blood-pressure"].value,
-    document.forms["form-container"]["serum-cholestrol"].value,
-    document.forms["form-container"]["fasting"].value,
-    document.forms["form-container"]["resting-ecg"].value,
-    document.forms["form-container"]["max-heart-rate"].value,
-    document.forms["form-container"]["exercise-induced"].value,
-    document.forms["form-container"]["st-depression"].value,
-    document.forms["form-container"]["peak-exercise"].value,
-    document.forms["form-container"]["major-vessels"].value,
-    document.forms["form-container"]["thal"].value);
-    
-    for (var i = 0; i < x.length; i++) {
-        if (x[i] == "") {
-            filled = false;
-        }
-    }
-    
-    if(!filled){
-        alert("All fields must be filled out");
-        return filled;
-    }
-    
-    var col = [0, 3, 4, 7, 9]
-    for (var i in col){
-        if (isNaN(x[i])){
-            alert("All text input must be a number");
-            filled = false;
-            return filled;
-        }
-    }
-    return filled;
-}*/
-
 function validateForm() {
     var age = document.getElementById("age");
     var age_img = document.getElementById('check1');
@@ -69,25 +18,25 @@ function validateForm() {
         empty=1;
     }
     else age_img.style.display = 'none';
-    
+
     if(!restbloodpressure.value) {
         restbloodpressure_img.style.display = 'inline-block';
         empty=1;
     }
     else restbloodpressure_img.style.display = 'none';
-    
+
     if(!serumcholestrol.value) {
         serumcholestrol_img.style.display = 'inline-block';
         empty=1;
     }
     else serumcholestrol_img.style.display = 'none';
-    
+
     if(!maxheartrate.value) {
         maxheartrate_img.style.display = 'inline-block';
         empty=1;
     }
     else maxheartrate_img.style.display = 'none';
-    
+
     if(!stdepression.value) {
         stdepression_img.style.display = 'inline-block';
         empty=1;
@@ -98,32 +47,32 @@ function validateForm() {
         alert("All fields must be filled out");
         return false;
     }
-    
+
     // All text input must be a number
     if(isNaN(age.value)) {
         age_img.style.display = 'inline-block';
         isnan=1;
     }
     else age_img.style.display = 'none';
-    
+
     if(isNaN(restbloodpressure.value)) {
         restbloodpressure_img.style.display = 'inline-block';
         isnan=1;
     }
     else restbloodpressure_img.style.display = 'none';
-    
+
     if(isNaN(serumcholestrol.value)) {
         serumcholestrol_img.style.display = 'inline-block';
         isnan=1;
     }
     else serumcholestrol_img.style.display = 'none';
-    
+
     if(isNaN(maxheartrate.value)) {
         maxheartrate_img.style.display = 'inline-block';
         isnan=1;
     }
     else maxheartrate_img.style.display = 'none';
-    
+
     if(isNaN(stdepression.value)) {
         stdepression_img.style.display = 'inline-block';
         isnan=1;
@@ -134,5 +83,43 @@ function validateForm() {
         alert("All text input must be a number");
         return false;
     }
-    else return true;
+
+    if (isnan != 1 && empty != 1) {
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById('result').innerHTML = xhr.responseText;
+        }
+      };
+      xhr.open('GET', 'getResult.php', false);
+      xhr.send();
+    }
 }
+
+function clearData() {
+  var age = document.getElementById("age");
+  var restbloodpressure = document.getElementById("rest-blood-pressure");
+  var serumcholestrol = document.getElementById("serum-cholestrol");
+  var maxheartrate = document.getElementById("max-heart-rate");
+  var stdepression = document.getElementById("st-depression");
+  
+  age.value = "";
+  restbloodpressure.value = "";
+  serumcholestrol.value = "";
+  maxheartrate.value = "";
+  stdepression.value = "";
+}
+
+/*
+function seeResult() {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("result").innerHTML = xhr.responseText;
+    }
+  };
+  xhr.open("GET", "getResult.php", false);
+  //xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+  xhr.send();
+}
+*/
