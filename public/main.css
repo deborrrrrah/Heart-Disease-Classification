@@ -58,7 +58,7 @@ img {
     color: #2B3A42;
     font-weight: 550; 
     font-family: Playfair Display;
-    font-size: 120%;
+    font-size: 20px;
 }
 
 .forms{
@@ -75,8 +75,9 @@ img {
 }
 
 .form-container{
-    margin-left: 25%;
-    margin-right: 25%;
+    width: 700px;
+    /* margin-left: 20%; */
+    /* margin-right: 20%; */
 }
 
 .input-container{
@@ -103,13 +104,14 @@ img {
 
 .label{
     float: left; 
-    margin-right: 10%;   
-    word-wrap: normal;
+    /* word-wrap: normal; */
+    white-space: pre-wrap; 
 }
 
 span.unit{
     float: right;
-    margin: 5px;
+    width: 60px;
+    font-size: 20px;
 }
 
 .submit{
@@ -118,8 +120,9 @@ span.unit{
 }
 
 .radio{
-    text-align: right;
-    margin: 5px;
+    text-align: left;
+    margin-left:490px;
+    font-size: 20px;
 }
 
 .dropdown{
@@ -128,13 +131,8 @@ span.unit{
 }
 
 .dropdown select{
-    border-radius: 4px;
-    font-family: Playfair Display;
-    font-size: 80%;
-    width:22%;
-    height: 25px;
-    background-color: #F0F0DF;
-    color: #2B3A42;
+    /* margin-right: 60px; */
+    width: 180px;
 }
 
 .input{
@@ -142,15 +140,28 @@ span.unit{
     text-align: right;
 }
 
-input[type=text]{
+/* input[type=text]{
     border-radius: 4px;
-    width: 12%;
-    height: auto;
+    width: 22%;
     font-size: 80%;
     font-family: Playfair Display;
     text-align: center;
-    background-color: #F0F0DF;
+} */
+
+.input-form {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 20px;
+    text-align: center;
+    font-family: Playfair Display;
+    border: 1px grey solid;
+    width: 120px;
+    padding: 0px;
     color: #2B3A42;
+    background-color: #F0F0DF;
+    height: 30px;
 }
 
 button {

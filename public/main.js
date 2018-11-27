@@ -108,7 +108,7 @@ function clearData() {
     serumcholestrol.value = "";
     maxheartrate.value = "";
     stdepression.value = "";
-    window.location.href = "main.php";
+    window.location.href = "index.php";
   }
 
 /*

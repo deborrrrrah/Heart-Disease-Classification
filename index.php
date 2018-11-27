@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Tubes Heart Disease</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="public/main.css">
+    <script src="public/main.js"></script>
 </head>
 <?php
     $output = 5;
@@ -25,11 +25,14 @@
     <div class = "body">
         <div class = "forms">
             <p>To know your heart disease diagnose, please fill the informations below.</p>
+            <center>
             <form class="form-container" onsubmit="return validateForm()" autocomplete="off" id="form">
                 <div class="input-container">
                     <div class="label"><label for="age">Age</label></div>
                     <img class="check_img" src="exclamation.jpg" id="check1" style="display: none">
-                    <div class="input"><input type="text" name="age" id="age" placeholder="21"><span class="unit">years</span></div>
+                    <div class="input">
+                        <input type="text" class="input-form" name="age" id="age" placeholder="21"><span class="unit">years</span>
+                    </div>
                 </div>
                 <div class="input-container">
                     <div class="label"><label for="sex">Sex</label></div>
@@ -41,7 +44,7 @@
                 <div class="input-container">
                     <div class="label"><label for="chest-pain-type">Chest-pain Type</label></div>
                     <div class="dropdown">
-                        <select name ="chest-pain-type">
+                        <select class="input-form" name ="chest-pain-type">
                             <option value="1">Typical Angina</option>
                             <option value="2">Atypical Angina</option>
                             <option value="3">Non-Anginal Pain</option>
@@ -53,7 +56,7 @@
                     <div class="label"><label for="resting-blood-pressure">Resting Blood Pressure</label></div>
                     <img class="check_img" src="exclamation.jpg" id="check2" style="display: none">
                     <div class="input">
-                        <input type="text" name="rest-blood-pressure" id="rest-blood-pressure" placeholder="210">
+                        <input class="input-form" type="text" name="rest-blood-pressure" id="rest-blood-pressure" placeholder="210">
                         <span class="unit">mmHg</span>
                     </div>
                 </div>
@@ -61,7 +64,7 @@
                     <div class="label"><label for="serum-cholestrol">Serum Cholestrol</label></div>
                     <img class="check_img" src="exclamation.jpg" id="check3" style="display: none">
                     <div class="input">
-                        <input type="text" name="serum-cholestrol" id="serum-cholestrol" placeholder="200">
+                        <input class="input-form" type="text" name="serum-cholestrol" id="serum-cholestrol" placeholder="200">
                         <span class="unit">mg/dl</span>
                     </div>
                 </div>
@@ -75,7 +78,7 @@
                 <div class="input-container">
                     <div class="label"><label for="resting-ecg">Resting ECG</label></div>
                     <div class = "dropdown">
-                        <select name ="resting-ecg">
+                        <select class="input-form" name ="resting-ecg">
                             <option value="0">Normal</option>
                             <option value="1">Having ST-T Wave Abnormality</option>
                             <option value="2">Left Ventricular Hyperthropy</option>
@@ -85,7 +88,7 @@
                 <div class="input-container">
                     <div class="label"><label for="max-heart-rate">Max Heart Rate Achieved</label></div>
                     <img class="check_img" src="exclamation.jpg" id="check4" style="display: none">
-                    <div class="input"><input type="text" name="max-heart-rate" id="max-heart-rate" placeholder="200"></div>
+                    <div class="input"><input class="input-form" type="text" name="max-heart-rate" id="max-heart-rate" placeholder="200" style="width:180px;"></div>
                 </div>
                 <div class="input-container">
                     <div class="label"><label for="exercise-induced">Exercise Induced Angina</label></div>
@@ -97,12 +100,12 @@
                 <div class="input-container">
                     <div class="label"><label for="st-depression">ST Depression Induced by Exercise Relative to Rest</label></div>
                     <img class="check_img" src="exclamation.jpg" id="check5" style="display: none">
-                    <div class="input"><input type="text" name="st-depression" id="st-depression" placeholder="200"></div>
+                    <div class="input"><input class="input-form" type="text" name="st-depression" id="st-depression" placeholder="200" style="width:180px;"></div>
                 </div>
                 <div class="input-container">
                     <div class="label"><label for="peak-exercise">Peak Exercise ST Segment</label></div>
                     <div class = "dropdown">
-                        <select name ="peak-exercise">
+                        <select class="input-form" name ="peak-exercise">
                             <option value="1">Upsloping</option>
                             <option value="2">Flat</option>
                             <option value="3">Downsloping</option>
@@ -112,7 +115,7 @@
                 <div class="input-container">
                     <div class="label"><label for="major-vessels">Number of Major Vessels (0-3) Colored by Flourosopy</label></div>
                     <div class = "dropdown">
-                        <select name ="major-vessels">
+                        <select class="input-form" name ="major-vessels">
                             <option value="0">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -123,7 +126,7 @@
                 <div class="input-container">
                     <div class="label"><label for="thal">Thal</label></div>
                     <div class = "dropdown">
-                        <select name ="thal">
+                        <select class="input-form" name ="thal">
                             <option value="3">Normal</option>
                             <option value="6">Fixed Defect</option>
                             <option value="9">Reversable Defect</option>
@@ -134,6 +137,7 @@
                     <button type="submit" name="submit" id="submit">SEE MY DIAGNOSIS</button>
                 </div>
             </form>
+            </center>
         </div>
         <?php
             if(isset($_GET['submit'])) {
