@@ -1,10 +1,7 @@
 # Tugas Besar II IF3170 Inteligensia Buatan
 ## Heart Disease Predictor
 
-# Tugas Besar II IF3170 Inteligensia Buatan
-## Heart Disease Predictor
-
-### Web untuk memprediksi kategori penyakit jantung 
+#### Web untuk memprediksi kategori penyakit jantung 
 #### menggunakan python
 
 Run :
