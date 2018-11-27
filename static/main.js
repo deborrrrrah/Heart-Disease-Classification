@@ -88,12 +88,53 @@ function validateForm() {
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-            document.getElementById('result').innerHTML = xhr.responseText;
+                document.getElementById('result').innerHTML = xhr.responseText;
+                console.log(xhr.responseText);
             }
         };
-        xhr.open('GET', 'getResult.php', true);
-        xhr.send();
+        xhr.open('POST', 'http://localhost:4000/predict');
+        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+
+        let Column1 = document.getElementById("age").value;
+        let Column2 = document.querySelector('input[name="sex"]:checked').value;
+        let Column3Inp = document.getElementById("select-column3");
+        let Column3 = Column3Inp.options[Column3Inp.selectedIndex].value;
+        let Column4 = document.getElementById("rest-blood-pressure").value;
+        let Column5 = document.getElementById("serum-cholestrol").value;
+        let Column6 = document.querySelector('input[name="fasting"]:checked').value;
+        let Column7Inp = document.getElementById("select-column7");
+        let Column7 = Column7Inp.options[Column7Inp.selectedIndex].value;
+        let Column8 = document.getElementById("max-heart-rate").value;
+        let Column9 = document.querySelector('input[name="exercise-induced"]:checked').value;
+        let Column10 = document.getElementById("st-depression").value;
+        let Column11Inp = document.getElementById("select-column11");
+        let Column11 = Column11Inp.options[Column11Inp.selectedIndex].value;
+        let Column12Inp = document.getElementById("select-column12");
+        let Column12 = Column12Inp.options[Column12Inp.selectedIndex].value;
+        let Column13Inp = document.getElementById("select-column13");
+        let Column13 = Column13Inp.options[Column13Inp.selectedIndex].value; 
+
+        let data = [
+            {
+                Column1 : Number(Column1),
+                Column2 : Number(Column2),
+                Column3 : Number(Column3),
+                Column4 : Number(Column4),
+                Column5 : Number(Column5),
+                Column6 : Number(Column6),
+                Column7 : Number(Column7),
+                Column8 : Number(Column8),
+                Column9 : Number(Column9),
+                Column10 : Number(Column10),
+                Column11 : Number(Column11),
+                Column12 : Number(Column12),
+                Column13 : Number(Column13)
+            }
+        ]
+        xhr.send(JSON.stringify(data));
     }
+
+    return false;
 }
 
 function clearData() {
@@ -109,7 +150,7 @@ function clearData() {
     maxheartrate.value = "";
     stdepression.value = "";
     window.location.href = "index.php";
-  }
+}
 
 /*
 function seeResult() {
