@@ -145,7 +145,7 @@
         <div class="results">
             <p>You are diagnose to be</p>
             <h1>
-            <div id="result"> 5 </div>
+            <p id="result"></p>
             </h1>
         </div>
     </div>

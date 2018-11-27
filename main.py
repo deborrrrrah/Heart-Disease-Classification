@@ -16,7 +16,7 @@ def main() :
     model = joblib.load('Model/gnb_model.sav')
     pred = model.predict(data)
     result = pred[0]
-    print (result)
+    return result
 
 if __name__ == '__main__':
     main()
