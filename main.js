@@ -85,27 +85,31 @@ function validateForm() {
     }
 
     if (isnan != 1 && empty != 1) {
-      var xhr = new XMLHttpRequest();
-      xhr.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("result").innerHTML = xhr.responseText;
-        }
-      };
-      xhr.open("POST", "getResult.php", true);
-      xhr.send();
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+            document.getElementById('result').innerHTML = xhr.responseText;
+            }
+        };
+        xhr.open('GET', 'getResult.php', true);
+        xhr.send();
     }
 }
 
 function clearData() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-       document.getElementById("result").innerHTML = this.responseText;
-      }
-    };
-    xhttp.open("GET", "ajax_info.txt", true);
-    xhttp.send();
-}
+    var age = document.getElementById("age");
+    var restbloodpressure = document.getElementById("rest-blood-pressure");
+    var serumcholestrol = document.getElementById("serum-cholestrol");
+    var maxheartrate = document.getElementById("max-heart-rate");
+    var stdepression = document.getElementById("st-depression");
+    
+    age.value = "";
+    restbloodpressure.value = "";
+    serumcholestrol.value = "";
+    maxheartrate.value = "";
+    stdepression.value = "";
+    window.location.href = "main.php";
+  }
 
 /*
 function seeResult() {
