@@ -28,7 +28,7 @@
                     <div class="label"><label for="age">Age</label></div>
                     <img class="check_img" src="static/exclamation.png" id="check1" style="display: none">
                     <div class="input">
-                        <input type="text" class="input-form" name="age" id="age" placeholder="21"><span class="unit">years</span>
+                        <input type="text" class="input-form" name="age" id="age" placeholder="54"><span class="unit">years</span>
                     </div>
                 </div>
                 <div class="input-container">
@@ -45,7 +45,7 @@
                             <option value="1">Typical Angina</option>
                             <option value="2">Atypical Angina</option>
                             <option value="3">Non-Anginal Pain</option>
-                            <option value="4">Asymptotic</option>
+                            <option value="4" selected>Asymptotic</option>
                         </select>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                     <div class="label"><label for="resting-blood-pressure">Resting Blood Pressure</label></div>
                     <img class="check_img" src="static/exclamation.png" id="check2" style="display: none">
                     <div class="input">
-                        <input class="input-form" type="text" name="rest-blood-pressure" id="rest-blood-pressure" placeholder="210">
+                        <input class="input-form" type="text" name="rest-blood-pressure" id="rest-blood-pressure" placeholder="130">
                         <span class="unit">mmHg</span>
                     </div>
                 </div>
@@ -61,22 +61,22 @@
                     <div class="label"><label for="serum-cholestrol">Serum Cholestrol</label></div>
                     <img class="check_img" src="static/exclamation.png" id="check3" style="display: none">
                     <div class="input">
-                        <input class="input-form" type="text" name="serum-cholestrol" id="serum-cholestrol" placeholder="200">
+                        <input class="input-form" type="text" name="serum-cholestrol" id="serum-cholestrol" placeholder="225">
                         <span class="unit">mg/dl</span>
                     </div>
                 </div>
                 <div class="input-container">
                     <div class="label"><label for="fasting">Fasting, Blood Sugar > 120 mg/dl?</label></div>
                     <div class="radio">
-                        <input type="radio" name="fasting" value="1" checked>True
-                        <input type="radio" name="fasting" value="0">False<br>
+                        <input type="radio" name="fasting" value="1">True
+                        <input type="radio" name="fasting" value="0" checked>False<br>
                     </div>
                 </div>
                 <div class="input-container">
                     <div class="label"><label for="resting-ecg">Resting ECG</label></div>
                     <div class = "dropdown">
                         <select class="input-form" name ="resting-ecg" id="select-column7">
-                            <option value="0">Normal</option>
+                            <option value="0" selected>Normal</option>
                             <option value="1">Having ST-T Wave Abnormality</option>
                             <option value="2">Left Ventricular Hyperthropy</option>
                         </select>
@@ -85,26 +85,26 @@
                 <div class="input-container">
                     <div class="label"><label for="max-heart-rate">Max Heart Rate Achieved</label></div>
                     <img class="check_img" src="static/exclamation.png" id="check4" style="display: none">
-                    <div class="input"><input class="input-form" type="text" name="max-heart-rate" id="max-heart-rate" placeholder="200" style="width:180px;"></div>
+                    <div class="input"><input class="input-form" type="text" name="max-heart-rate" id="max-heart-rate" placeholder="140" style="width:180px;"></div>
                 </div>
                 <div class="input-container">
                     <div class="label"><label for="exercise-induced">Exercise Induced Angina</label></div>
                     <div class="radio">
-                        <input type="radio" name="exercise-induced" value="1" checked>Yes
-                        <input type="radio" name="exercise-induced" value="0">No
+                        <input type="radio" name="exercise-induced" value="1">Yes
+                        <input type="radio" name="exercise-induced" value="0" checked>No
                     </div>
                 </div>
                 <div class="input-container">
                     <div class="label"><label for="st-depression">ST Depression Induced by Exercise Relative to Rest</label></div>
                     <img class="check_img" src="static/exclamation.png" id="check5" style="display: none">
-                    <div class="input"><input class="input-form" type="text" name="st-depression" id="st-depression" placeholder="200" style="width:180px;"></div>
+                    <div class="input"><input class="input-form" type="text" name="st-depression" id="st-depression" placeholder="3.94" style="width:180px;"></div>
                 </div>
                 <div class="input-container">
                     <div class="label"><label for="peak-exercise">Peak Exercise ST Segment</label></div>
                     <div class = "dropdown">
                         <select class="input-form" name ="peak-exercise" id="select-column11">
                             <option value="1">Upsloping</option>
-                            <option value="2">Flat</option>
+                            <option value="2" selected>Flat</option>
                             <option value="3">Downsloping</option>
                         </select>
                     </div>
@@ -113,7 +113,7 @@
                     <div class="label"><label for="major-vessels">Number of Major Vessels (0-3) Colored by Flourosopy</label></div>
                     <div class = "dropdown">
                         <select class="input-form" name ="major-vessels" id ="select-column12">
-                            <option value="0">0</option>
+                            <option value="0" selected>0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -124,7 +124,7 @@
                     <div class="label"><label for="thal">Thal</label></div>
                     <div class = "dropdown">
                         <select class="input-form" name ="thal" id="select-column13">
-                            <option value="3">Normal</option>
+                            <option value="3" selected>Normal</option>
                             <option value="6">Fixed Defect</option>
                             <option value="7">Reversable Defect</option>
                         </select>
