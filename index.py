@@ -17,20 +17,19 @@ def index():
 @app.route('/predict', methods=['POST'])
 def predict() :
     data = request.json
-    print(data, file=sys.stdout)
 
-    data_json = json.dumps(data);
+    data_json = json.dumps(data)
+    # print(data_json, file=sys.stdout)
 
-    df = pd.read_json(data_json)
-    print(df, file=sys.stdout)
+    df = pd.read_json(data_json, orient="split")
+    # print(df, file=sys.stdout)
 
-    # df = clean_df(df)
-    # prediction = model.predict(df)
+    df = clean_df(df)
+    prediction = model.predict(df)
 
-    # app.logger.info(prediction)
+    # print(prediction, file=sys.stdout)
 
-    # return jsonify({'prediction': list(prediction)})
-    return Response("FINAL", status=200);
+    return Response(str(prediction[0]), status=200);
 
 def clean_df(df) :
     df = df.drop(columns=['Column12', 'Column13'])
@@ -39,4 +38,5 @@ def clean_df(df) :
 
 if __name__ == '__main__':
     model = joblib.load('model/gnb_model.sav', mmap_mode='r')
+    # print(model.__dict__)
     app.run(port=4000)

@@ -88,8 +88,12 @@ function validateForm() {
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-                document.getElementById('result').innerHTML = xhr.responseText;
-                console.log(xhr.responseText);
+                if (xhr.responseText == 0) {
+                    document.getElementById('result').innerHTML = `Normal (${xhr.responseText})`;
+                } else {
+                    document.getElementById('result').innerHTML = `Berpenyakit jantung dengan kategori ${xhr.responseText}`;
+                }
+                // console.log(xhr.responseText);
             }
         };
         xhr.open('POST', 'http://localhost:4000/predict');
@@ -114,23 +118,17 @@ function validateForm() {
         let Column13Inp = document.getElementById("select-column13");
         let Column13 = Column13Inp.options[Column13Inp.selectedIndex].value; 
 
-        let data = [
-            {
-                Column1 : Number(Column1),
-                Column2 : Number(Column2),
-                Column3 : Number(Column3),
-                Column4 : Number(Column4),
-                Column5 : Number(Column5),
-                Column6 : Number(Column6),
-                Column7 : Number(Column7),
-                Column8 : Number(Column8),
-                Column9 : Number(Column9),
-                Column10 : Number(Column10),
-                Column11 : Number(Column11),
-                Column12 : Number(Column12),
-                Column13 : Number(Column13)
-            }
-        ]
+        let data = {
+            "data" : [
+                [
+                    Number(Column1), Number(Column2), Number(Column3), Number(Column4), Number(Column5), Number(Column6), Number(Column7), Number(Column8), Number(Column9), Number(Column10), Number(Column11), Number(Column12), Number(Column13)
+                ]
+            ],
+            "columns" : [
+                "Column1", "Column2", "Column3", "Column4", "Column5", "Column6", "Column7", "Column8", "Column9", "Column10", "Column11", "Column12", "Column13"
+            ],
+            "index" : [0]
+        }
         xhr.send(JSON.stringify(data));
     }
 
@@ -149,7 +147,7 @@ function clearData() {
     serumcholestrol.value = "";
     maxheartrate.value = "";
     stdepression.value = "";
-    window.location.href = "index.php";
+    window.location.href = "/";
 }
 
 /*

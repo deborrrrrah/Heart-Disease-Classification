@@ -176,6 +176,10 @@ button {
     margin-bottom: 7px;
 }
 
+button[name=submit] {
+    padding: 10px;
+}
+
 button:hover {
     background-color: #3A4042;
     color: #F0F0DF;
